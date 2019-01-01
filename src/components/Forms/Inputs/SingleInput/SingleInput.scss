@@ -1,0 +1,19 @@
+@import '../../../../styles/sass/index.scss';
+
+.single-input {
+    border: none;
+    background: $white;
+    outline: none;
+    font-size: 14px;
+    color: $black;
+    padding: 10px;
+    text-transform: capitalize;
+
+    @media screen and (min-width: 320px) {
+        height: 35px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 45px;
+    }
+}

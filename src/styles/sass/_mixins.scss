@@ -1,0 +1,15 @@
+// General Mixins Styles
+
+@mixin fadeIn {
+    opacity: 1;
+    animation: fadeIn 500ms ease;
+
+    @keyframes fadeIn{
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+    }
+}

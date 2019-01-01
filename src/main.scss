@@ -1,0 +1,136 @@
+@import './styles/sass/_index.scss';
+
+.main {
+    display: flex;
+    flex-grow: 1;
+
+    @media screen and (min-width: $xxsm-devices-value) {
+        flex-direction: column;
+        height: $width-full-viewport;
+    }
+
+    @media screen and (min-width: $sm-landcape-devices-value) {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    section{
+        &:first-child {
+            display: flex;
+            background: $gray-light;
+            color: $white;
+
+            @media screen and (min-width: $xxsm-devices-value) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+            }
+
+            @media screen and (min-width: $xmd-devices-value) {
+                width: 500px;
+            }
+
+            h1 {
+                padding: 0;
+
+                @media screen and (min-width: $xxsm-devices-value) {
+                    font-size: 2.3em;
+                    margin: 10px 0 10px 0;
+                }
+
+                @media screen and (min-width: $md-devices-value) {
+                    font-size: 3.5em;
+                    margin: 35px 0 35px 0;
+                }
+            }
+
+            p {
+                line-height: 1.3;
+                letter-spacing: 1px;
+                margin: 0;
+
+                @media screen and (min-width: $xxsm-devices-value) {
+                    font-size: 16px;
+                }
+
+                @media screen and (min-width: $md-devices-value) {
+                    font-size: 25px;
+                }
+            }
+
+            .img-logo {
+                img {
+                    @media screen and (min-width: $xxsm-devices-value) {
+                        width: 280px;
+                    }
+
+                    @media screen and (min-width: $md-devices-value) {
+                        width: 340px;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            display: flex;
+            background: $gray-darkened;
+            flex-grow: 1;
+
+            @media screen and (min-width: $xxsm-devices-value) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                justify-content: flex-start;
+            }
+
+            @media screen and (min-width: $sm-landcape-devices-value) {
+                justify-content: center;
+            }
+
+            @media screen and (min-width: $md-devices-value) {
+                padding: 65px;
+            }
+
+            form {
+                width: $width-full-percentage;
+                
+                @media screen and (min-width: $xxsm-devices-value) {
+                   flex-direction: column;
+                   align-items: center;
+                }
+
+                @media screen and (min-width: $xmd-devices-value){
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                .single-input {
+                    @media screen and (min-width: $xxsm-devices-value) {
+                        width: $width-full-percentage;
+                        margin-bottom: 10px;
+                    } 
+
+                    @media screen and (min-width: $xmd-devices-value){
+                        width: 33.33%;
+                        margin-right: 8px;
+                        margin-bottom: 0px;
+                    }
+                }
+
+                .submit-button {
+                    @media screen and (min-width: $xxsm-devices-value) {
+                        width: $width-full-percentage;
+                    }
+                    
+                    @media screen and (min-width: $xmd-devices-value){
+                        width: 33.33%;
+                    }
+                }
+            }
+        }
+    }
+}

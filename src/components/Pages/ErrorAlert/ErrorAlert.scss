@@ -1,0 +1,17 @@
+@import '../../../styles/sass/index';
+
+.error-alert {
+    @media screen and (min-width: $xxsm-devices-value) {
+        width: $width-full-percentage;
+        text-align: left;
+        margin-top: 10px;
+        font-weight: 900;
+        color: $red-alert;
+        @include fadeIn;
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: $sm-devices-value) {
+        font-size: 16px;
+    }
+}

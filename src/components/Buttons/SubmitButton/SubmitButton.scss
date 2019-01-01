@@ -1,0 +1,25 @@
+@import '../../../styles/sass/index';
+
+.submit-button {
+    background: $black;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0 30px 0 30px;
+    text-transform: capitalize;
+
+    &.disabled {
+        cursor: no-drop; 
+    }
+
+    @media screen and (min-width: $xxsm-devices-value) {
+        height: 35px;
+    }
+
+    @media screen and (min-width: $xxmd-devices-value) {
+        height: 45px;
+    }
+}
