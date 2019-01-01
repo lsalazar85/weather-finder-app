@@ -25,4 +25,4 @@ Starts on `http://localhost:3000`
 * HTML5
 * CSS3
 * i18n-iso-countries
-* Mobile First deveploment
+* Mobile First development
