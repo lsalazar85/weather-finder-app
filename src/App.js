@@ -20,16 +20,16 @@ class App extends Component {
   }
 
   // Get country code 
-  countryName = (event) => {
+  getCountryName = event => {
     const countryName = this.setState({ countryName : event.target.value})
     const countryValue = countries.getAlpha2Code(countryName, 'en')
-    return this.setState({ countryCode : countryValue })
+    this.setState({ countryCode : countryValue })
   }
 
   // Get city name
-  cityName = (event) => {
+  getCityName = event => {
     const city = event.target.value
-    return this.setState({ cityName: city })
+    this.setState({ cityName: city })
   }
 
   // Fetch Api by city and country
@@ -91,12 +91,12 @@ class App extends Component {
           <SingleInput 
             type="text" 
             placeholder="Insert City..."
-            onChange={this.cityName}
+            onChange={this.getCityName}
           />
           <SingleInput 
             type="text"
             placeholder="Insert Country..."
-            onChange={this.countryName}
+            onChange={this.getCountryName}
            />
            <SubmitButton 
             value="Search Weather" 
@@ -105,15 +105,15 @@ class App extends Component {
             country={countryName}
            />
         </form>
-        {data && data.cod === 200 ? <CountryWeather data={data}/> : null }
-        {data && data.cod !== 200 ? <ErrorAlert content="Error Data - City and/or Country not found"/> : null}
+        {data && data.cod === 200 ? <CountryWeather data={data}/> : data && data.cod !== 200 ?
+        <ErrorAlert content="Error Data - City and/or Country not found"/> : null }
       </section>
     )
   }
   
 
   render() {
-    const { SectionTitle, SectionForm} = this;
+    const { SectionTitle, SectionForm } = this;
     
     return (
       <main className="main">
