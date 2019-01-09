@@ -3,12 +3,12 @@ import './SubmitButton.scss';
 
 const SubmitButton = (props) => {
     const { onClick, value, city, country } = props
-    const values = city === "" || country === ""
+    const isErrorCondition = city === "" || country === ""
     
     return (
-        <input className={values ? "submit-button disabled" : "submit-button"}
+        <input className={isErrorCondition ? "submit-button disabled" : "submit-button"}
          type="button" onClick={onClick}
-         value={value} disabled={values ? true : false}/>
+         value={value} disabled={isErrorCondition ? true : false}/>
     )
 }
 
