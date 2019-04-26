@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 import './SubmitButton.scss';
 
 const SubmitButton = (props) => {
@@ -6,9 +7,14 @@ const SubmitButton = (props) => {
     const isErrorCondition = city === "" || country === ""
     
     return (
-        <input className={isErrorCondition ? "submit-button disabled" : "submit-button"}
-         type="button" onClick={onClick}
-         value={value} disabled={isErrorCondition ? true : false}/>
+        <React.Fragment>
+            <Button  variant="contained" className="submit-button"
+                onClick={onClick}
+                color="white"
+                value={value} disabled={isErrorCondition ? true : false}>
+                Search Weather
+            </Button>
+        </React.Fragment>
     )
 }
 

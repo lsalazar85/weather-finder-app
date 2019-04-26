@@ -1,4 +1,5 @@
 import React from 'react';
+import TextField from '@material-ui/core/TextField';
 import './SingleInput.scss';
 
 const SingleInput = (props) => {
@@ -6,11 +7,14 @@ const SingleInput = (props) => {
     const valueInput = onChange
     
     return (
-        <input
-            className="single-input" 
-            type={type} 
-            placeholder={placeholder} 
-            onChange={valueInput}  
+        <TextField
+          className="single-input" 
+          type={type} 
+          id="outlined-bare"
+          defaultValue={placeholder}
+          margin="normal"
+          variant="outlined"
+          onChange={valueInput} 
         />
     )
 }

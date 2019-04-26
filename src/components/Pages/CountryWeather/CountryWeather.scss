@@ -21,6 +21,10 @@
     }
 
     div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
         width: $width-full-percentage;
 
         @media screen and (min-width: $xxsm-devices-value) {
@@ -37,14 +41,14 @@
 
         span {
             &:first-child {
-                font-size: 14px;
+                font-size: 16px;
                 margin-right: 8px;
                 text-transform: uppercase;
                 font-weight: 900;
             }
 
             &:last-child {
-                font-size: 12px;
+                font-size: 14px;
                 font-weight: 400;
             }
         }

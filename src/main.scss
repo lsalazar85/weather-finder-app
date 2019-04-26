@@ -20,14 +20,12 @@
         .section-title {
             letter-spacing: 5px;
             font-size: 28px;
-
-            
         }
 
         &:first-child {
             display: flex;
             background: $gray-light;
-            color: black;
+            color: $black;
 
             @media screen and (min-width: $xxsm-devices-value) {
                 flex-direction: column;
@@ -80,7 +78,7 @@
 
         &:last-child {
             display: flex;
-            background: $gray-darkened;
+            background: #e1f4fb;
             flex-grow: 1;
 
             @media screen and (min-width: $xxsm-devices-value) {
