@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material/button": "^1.1.1",
     "i18n-iso-countries": "^3.7.8",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",

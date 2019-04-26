@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './static/img/logo_edrans.png';
+import logo from './static/img/logo-app.png';
 import SingleInput from './components/Forms/Inputs/SingleInput';
 import SubmitButton from './components/Buttons/SubmitButton';
 import CountryWeather from './components/Pages/CountryWeather';
@@ -87,6 +87,7 @@ class App extends Component {
     const { data, cityName, countryName } = this.state
     return (
       <section>
+        <h1 className="section-title">Insert Information</h1>
         <form>
           <SingleInput 
             type="text" 

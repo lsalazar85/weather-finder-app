@@ -11,6 +11,9 @@ const CountryWeather = (props) => {
 
     return (
         <div className="country-weather">
+            <div className="country-weather-title">
+                <h1>Weather Information</h1>
+            </div>
             <div>
                 <span>Location:</span>
                 <span>{city}, {country}</span>

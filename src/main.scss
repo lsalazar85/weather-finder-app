@@ -3,22 +3,31 @@
 .main {
     display: flex;
     flex-grow: 1;
+    @include fadeIn;
 
     @media screen and (min-width: $xxsm-devices-value) {
         flex-direction: column;
         height: $width-full-viewport;
     }
 
-    @media screen and (min-width: $sm-landcape-devices-value) {
+    @media screen and (min-width: 769px) {
         flex-direction: row;
         justify-content: center;
     }
 
     section{
+
+        .section-title {
+            letter-spacing: 5px;
+            font-size: 28px;
+
+            
+        }
+
         &:first-child {
             display: flex;
             background: $gray-light;
-            color: $white;
+            color: black;
 
             @media screen and (min-width: $xxsm-devices-value) {
                 flex-direction: column;
@@ -29,7 +38,7 @@
             }
 
             @media screen and (min-width: $xmd-devices-value) {
-                width: 500px;
+                width: 50%
             }
 
             h1 {
@@ -40,7 +49,7 @@
                     margin: 10px 0 10px 0;
                 }
 
-                @media screen and (min-width: $md-devices-value) {
+                @media screen and (min-width: $xxmd-devices-value) {
                     font-size: 3.5em;
                     margin: 35px 0 35px 0;
                 }
@@ -51,11 +60,7 @@
                 letter-spacing: 1px;
                 margin: 0;
 
-                @media screen and (min-width: $xxsm-devices-value) {
-                    font-size: 16px;
-                }
-
-                @media screen and (min-width: $md-devices-value) {
+                @media screen and (min-width: $xxmd-devices-value) {
                     font-size: 25px;
                 }
             }
@@ -63,11 +68,11 @@
             .img-logo {
                 img {
                     @media screen and (min-width: $xxsm-devices-value) {
-                        width: 280px;
+                        width: 150px;
                     }
 
                     @media screen and (min-width: $md-devices-value) {
-                        width: 340px;
+                        width: 150px;
                     }
                 }
             }
@@ -86,48 +91,37 @@
                 justify-content: flex-start;
             }
 
-            @media screen and (min-width: $sm-landcape-devices-value) {
+            @media screen and (min-width: $xxmd-devices-value) {
                 justify-content: center;
+                padding: 65px;
+                width: 100%
             }
 
-            @media screen and (min-width: $md-devices-value) {
-                padding: 65px;
+            @media screen and (min-width: 769px) {
+                width: 50%
             }
 
             form {
-                width: $width-full-percentage;
+                display: flex;
+                width: 100%;
+                border: 1px solid black;
+                padding: 28px 0 28px 0;
                 
                 @media screen and (min-width: $xxsm-devices-value) {
                    flex-direction: column;
                    align-items: center;
                 }
 
-                @media screen and (min-width: $xmd-devices-value){
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                }
-
                 .single-input {
                     @media screen and (min-width: $xxsm-devices-value) {
-                        width: $width-full-percentage;
+                        width: 90%;
                         margin-bottom: 10px;
                     } 
-
-                    @media screen and (min-width: $xmd-devices-value){
-                        width: 33.33%;
-                        margin-right: 8px;
-                        margin-bottom: 0px;
-                    }
                 }
 
                 .submit-button {
                     @media screen and (min-width: $xxsm-devices-value) {
-                        width: $width-full-percentage;
-                    }
-                    
-                    @media screen and (min-width: $xmd-devices-value){
-                        width: 33.33%;
+                        width: 90%;
                     }
                 }
             }
