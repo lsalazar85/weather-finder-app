@@ -52,13 +52,14 @@ class FormContainer extends Component {
     }
 
     render() {
-        const { handleSearch, validateForm, getCityName } = this;
+        const { handleSearch, validateForm, getCityName, getCountryName } = this;
 
         return (
             <SectionForm
                 handleSearch={handleSearch}
                 validateForm={validateForm}
-                getCityName={getCityName}
+                CityName={getCityName}
+                CountryName={getCountryName}
             />
         )
     }
