@@ -53,7 +53,7 @@ class FormContainer extends Component {
 
     render() {
         const { handleSearch, validateForm, getCityName, getCountryName } = this;
-
+        console.log(this.props)
         return (
             <SectionForm
                 handleSearch={handleSearch}
@@ -65,5 +65,15 @@ class FormContainer extends Component {
     }
 }
 
+    const  mapStateToProps = (state) => {
+    return {
+        countryName: state.countryName,
+        countryCode: state.countryCode,
+        city: state.city,
+        data: state.data,
+        error: state.error
+    }
+}
 
-export default connect(null, null)(FormContainer);
+
+export default connect(mapStateToProps, null)(FormContainer);

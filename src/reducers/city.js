@@ -1,8 +1,8 @@
-import { SET_CITY } from '../actions';
+import { GET_CITY_NAME} from '../actions';
 
-export const city = (state, action) => {
+export const city = (state = [], action) => {
     switch (action.type) {
-        case SET_CITY:
+        case GET_CITY_NAME:
             return { ...state, city: action.payload }
         default: 
             return state;
