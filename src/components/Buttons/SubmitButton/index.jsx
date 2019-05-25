@@ -4,13 +4,13 @@ import './SubmitButton.scss';
 
 const SubmitButton = ( props ) => {
     const { onClick, value, city, country } = props
-    const isErrorCondition = city === "" || country === ""
+    //const isErrorCondition = city === "" || country === ""
     
     return (
         <React.Fragment>
             <Button  variant="contained" className="submit-button"
                 onClick={onClick}
-                value={value} disabled={isErrorCondition ? true : false}>
+                value={value}>
                 Search Weather
             </Button>
         </React.Fragment>

@@ -2,9 +2,8 @@ import { createStore } from "redux";
 import { reducer } from "./../reducers";
 
 const initialState = {
-    countryName: "",
-    countryCode: "",
     city: "",
+    country: "",
     data: [],
     error: false
 }

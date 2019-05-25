@@ -6,7 +6,7 @@
     "@material-ui/core": "^3.9.3",
     "@material/button": "^1.1.1",
     "babel-loader": "8.0.4",
-    "i18n-iso-countries": "^3.7.8",
+    "i18n-iso-countries": "^4.1.0",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.7.0",

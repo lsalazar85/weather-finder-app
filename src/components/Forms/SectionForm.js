@@ -5,7 +5,7 @@ import SubmitButton from '../Buttons/SubmitButton';
 //import ErrorAlert from "../Pages/ErrorAlert";
 //import CountryWeather from "../Pages/CountryWeather"
 
-const SectionForm = ({handleSearch, validateForm, CityName, CountryName}) => {
+const SectionForm = ({ CityName, CountryName, handleSearch }) => {
     return (
         <section>
             <h1 className="section-title">Insert Information</h1>
@@ -13,16 +13,16 @@ const SectionForm = ({handleSearch, validateForm, CityName, CountryName}) => {
                 <SingleInput 
                     type="text" 
                     placeholder="Insert City..."
-                    //onChange={getCityName}
+                    onChange={CityName}
                 />
                 <SingleInput 
                     type="text"
                     placeholder="Insert Country..."
-                    //onChange={getCountryName}
+                    onChange={CountryName}
                 />
                 <SubmitButton 
                     value="Search Weather" 
-                    //onClick={handleSearch}
+                    onClick={handleSearch}
                     //city={cityName}
                     //country={countryName}
                 />
