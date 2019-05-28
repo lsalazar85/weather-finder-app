@@ -1,7 +1,7 @@
 import React, { Component } from  "react";
 import { connect } from "react-redux";
 import SectionForm from "../components/Forms/SectionForm";
-import { setCity, setCountryName, fetchData } from "../actions";
+import { setCity, setCountryName, fetchData, setError } from "../actions";
 
 
 class FormContainer extends Component {
@@ -19,9 +19,9 @@ class FormContainer extends Component {
 
     //Validate Form inputs fields by state values
     validateForm = () => {
-        const { cityName, countryName } = this.state
-        cityName === "" || countryName === "" ? 
-        this.setState({ error : true }) : this.setState({ error : false })    
+        const { city, country } = this.props
+        city === "" || country === "" ? 
+        this.props.setError(true) : this.props.setError(false)    
     }
 
     // Search Weather Principal Function
@@ -56,7 +56,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => ({
     setCity: value => dispatch(setCity(value)),
     setCountryName: value => dispatch(setCountryName(value)),
-    fetchData: () => dispatch(fetchData())
+    fetchData: () => dispatch(fetchData()),
+    setError: value => dispatch(setError(value))
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(FormContainer);
