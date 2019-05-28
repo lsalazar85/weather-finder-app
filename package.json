@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material/button": "^1.1.1",
+    "axios": "^0.18.0",
     "babel-loader": "8.0.4",
     "i18n-iso-countries": "^4.1.0",
     "node-sass": "^4.12.0",
