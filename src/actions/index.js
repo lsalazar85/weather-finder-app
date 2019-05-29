@@ -1,3 +1,4 @@
+import { apiKey, metric, url_root } from "../constants/api_parts";
 const countries = require("i18n-iso-countries");
 countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 
@@ -11,13 +12,13 @@ export const setCountryName = payload => ({ type: SET_COUNTRY_NAME, payload });
 export const setError = payload => ({ type: SET_ERROR, payload });
 const getData = payload => ({ type: GET_DATA, payload });
 
-export const fetchData =  () => {
+export const fetchData = payload => {
     return dispatch => {
-        return fetch("https://swapi.co/api/people/1").then(
-            data => (data.json())
+        fetch(`${url_root}${payload}${apiKey}${metric}`).then(
+            resp => (resp.json())
         ).then (
-            (response) => {
-                dispatch(getData(response))
+            (data) => {
+                dispatch(getData(data))
             }
         )
     }
