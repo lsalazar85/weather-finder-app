@@ -1,4 +1,5 @@
 import React, { Component } from  "react";
+import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import SectionForm from "../components/Forms/SectionForm";
 import { setCity, setCountryName, fetchData, setError } from "../actions";
@@ -22,16 +23,16 @@ class FormContainer extends Component {
 
     //Validate Form inputs fields by state values
     validateForm = () => {
-        const { city, country } = this.props
-        city === "" || country === "" ? 
-        this.props.setError(true) : this.props.setError(false)    
+        this.props.city === "" || this.props.country === "" ? 
+        this.props.setError(true) : this.props.setError(false)  
+        console.log(this.props.error)
     }
 
     // Search Weather Principal Function
     handleSearch = () => {
         const { city, country } = this.props
         this.props.fetchData(`${city.city},${country.country}`);
-        //this.validateForm();
+        this.validateForm();
     }
 
     render() {
@@ -48,7 +49,7 @@ class FormContainer extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         city: state.city,
         country: state.country,
@@ -63,5 +64,16 @@ const mapDispatchToProps = dispatch => ({
     fetchData: value => dispatch(fetchData(value)),
     setError: value => dispatch(setError(value))
 });
+
+/* FormContainer.propTypes = {
+    city: PropTypes.string,
+    country: PropTypes.string,
+    data: PropTypes.array,
+    error: PropTypes.bool,
+    setCity: PropTypes.func,
+    setCountryName: PropTypes.func,
+    fetchData: PropTypes.func,
+    setError: PropTypes.func
+} */
 
 export default connect(mapStateToProps,mapDispatchToProps)(FormContainer);
